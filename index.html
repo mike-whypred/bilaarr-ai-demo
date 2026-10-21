@@ -12,40 +12,39 @@
     body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--fg);
       font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       display: flex; flex-direction: column; align-items: center; padding: 28px 16px 32px; }
-    header { display: flex; align-items: center; justify-content: center; gap: 20px;
-      width: 100%; max-width: 900px; margin-bottom: 22px; }
+    header { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 900px; margin-bottom: 20px; }
+    .row { display: flex; align-items: center; justify-content: center; gap: 22px; }
     .portrait { width: 150px; height: 150px; object-fit: contain; flex: none; }
-    .brand { display: flex; align-items: center; gap: 14px; min-width: 0; text-align: left; }
-    .mark { height: 62px; width: auto; flex: none; align-self: flex-start; margin-top: 2px; }
+    .brand { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .mark { height: 74px; width: auto; margin-bottom: 4px; }
     h1 { font-size: 2.4rem; font-weight: 500; letter-spacing: .01em; margin: 0; line-height: 1.1; }
     .tagline { margin: 4px 0 0; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--fg); }
-    .note { margin: 8px 0 0; font-size: .85rem; color: var(--muted); }
+    .note { margin: 12px 0 0; font-size: .9rem; color: var(--muted); text-align: center; }
     #chirpy-agent { width: 100%; max-width: 900px; height: min(780px, calc(100vh - 260px)); min-height: 560px; }
     footer { margin-top: 14px; font-size: .8rem; color: var(--muted); text-align: center; }
     @media (max-width: 600px) {
       body { padding: 20px 12px 24px; }
-      header { flex-direction: column; gap: 8px; text-align: center; }
-      .portrait { width: 110px; height: 110px; }
-      .brand { gap: 10px; }
-      .mark { height: 40px; }
-      h1 { font-size: 1.7rem; }
-      .tagline { font-size: .58rem; letter-spacing: .1em; }
-      .note { font-size: .78rem; }
-      #chirpy-agent { height: calc(100vh - 210px); min-height: 480px; }
+      .row { gap: 14px; }
+      .portrait { width: 100px; height: 100px; }
+      .mark { height: 46px; }
+      h1 { font-size: 1.6rem; }
+      .tagline { font-size: .55rem; letter-spacing: .1em; }
+      .note { font-size: .8rem; }
+      #chirpy-agent { height: calc(100vh - 230px); min-height: 480px; }
     }
   </style>
 </head>
 <body>
   <header>
-    <img class="portrait" src="bilaarr-portrait.webp" alt="Bilaarr AI">
-    <div class="brand">
-      <img class="mark" src="bilaarr-mark.webp" alt="">
-      <div>
+    <div class="row">
+      <img class="portrait" src="bilaarr-portrait.webp" alt="Bilaarr AI">
+      <div class="brand">
+        <img class="mark" src="bilaarr-mark.webp" alt="">
         <h1>Bilaarr Ai</h1>
         <p class="tagline">Rooted in culture. Designed for tomorrow.</p>
-        <p class="note">Cultural Curriculum Coach. Test deployment for TIPIAC Pty Ltd.</p>
       </div>
     </div>
+    <p class="note">Cultural Curriculum Coach. Test deployment for TIPIAC Pty Ltd.</p>
   </header>
 
   <!-- Size this container to fit your layout -->
