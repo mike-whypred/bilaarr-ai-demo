@@ -5,28 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Bilaarr AI: Cultural Curriculum Coach (test)</title>
   <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="bilaarr-mark.webp">
   <style>
     :root { --bg: #f6f7f4; --fg: #1f2a24; --muted: #5f6b63; --green: #4caf50; }
     * { box-sizing: border-box; }
     body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--fg);
       font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      display: flex; flex-direction: column; align-items: center; padding: 32px 16px; }
-    header { text-align: center; max-width: 440px; margin-bottom: 20px; }
-    h1 { font-size: 1.5rem; margin: 0 0 6px; }
-    h1 span { color: var(--green); }
-    p { margin: 0; color: var(--muted); font-size: .95rem; }
-    #chirpy-agent { width: 100%; max-width: 440px; height: 600px; }
-    footer { margin-top: 16px; font-size: .8rem; color: var(--muted); text-align: center; max-width: 440px; }
+      display: flex; flex-direction: column; align-items: center; padding: 28px 16px 32px; }
+    header { display: flex; align-items: center; justify-content: center; gap: 20px;
+      width: 100%; max-width: 900px; margin-bottom: 22px; }
+    .portrait { width: 150px; height: 150px; object-fit: contain; flex: none; }
+    .brand { display: flex; align-items: center; gap: 14px; min-width: 0; text-align: left; }
+    .mark { height: 96px; width: auto; flex: none; }
+    h1 { font-size: 2.4rem; font-weight: 500; letter-spacing: .01em; margin: 0; line-height: 1.1; }
+    .tagline { margin: 4px 0 0; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--fg); }
+    .note { margin: 8px 0 0; font-size: .85rem; color: var(--muted); }
+    #chirpy-agent { width: 100%; max-width: 900px; height: min(780px, calc(100vh - 260px)); min-height: 560px; }
+    footer { margin-top: 14px; font-size: .8rem; color: var(--muted); text-align: center; }
+    @media (max-width: 600px) {
+      body { padding: 20px 12px 24px; }
+      header { flex-direction: column; gap: 8px; text-align: center; }
+      .portrait { width: 110px; height: 110px; }
+      .brand { gap: 10px; }
+      .mark { height: 56px; }
+      h1 { font-size: 1.7rem; }
+      .tagline { font-size: .58rem; letter-spacing: .1em; }
+      .note { font-size: .78rem; }
+      #chirpy-agent { height: calc(100vh - 210px); min-height: 480px; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h1>Bilaarr <span>AI</span></h1>
-    <p>Cultural Curriculum Coach. Test deployment for TIPIAC Pty Ltd.</p>
+    <img class="portrait" src="bilaarr-portrait.webp" alt="Bilaarr AI">
+    <div class="brand">
+      <img class="mark" src="bilaarr-mark.webp" alt="">
+      <div>
+        <h1>Bilaarr Ai</h1>
+        <p class="tagline">Rooted in culture. Designed for tomorrow.</p>
+        <p class="note">Cultural Curriculum Coach. Test deployment for TIPIAC Pty Ltd.</p>
+      </div>
+    </div>
   </header>
 
   <!-- Size this container to fit your layout -->
-  <div id="chirpy-agent" style="width:100%;max-width:440px;height:600px"></div>
+  <div id="chirpy-agent"></div>
   <script>
     window.chirpyAIConfig = {
       chatbotId: "01b443dd-6b09-498e-9d42-ca1dceaa0229",
