@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bilaarr AI: Cultural Curriculum Coach (test)</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    :root { --bg: #f6f7f4; --fg: #1f2a24; --muted: #5f6b63; --green: #4caf50; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; background: var(--bg); color: var(--fg);
+      font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      display: flex; flex-direction: column; align-items: center; padding: 32px 16px; }
+    header { text-align: center; max-width: 440px; margin-bottom: 20px; }
+    h1 { font-size: 1.5rem; margin: 0 0 6px; }
+    h1 span { color: var(--green); }
+    p { margin: 0; color: var(--muted); font-size: .95rem; }
+    #chirpy-agent { width: 100%; max-width: 440px; height: 600px; }
+    footer { margin-top: 16px; font-size: .8rem; color: var(--muted); text-align: center; max-width: 440px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bilaarr <span>AI</span></h1>
+    <p>Cultural Curriculum Coach. Test deployment for TIPIAC Pty Ltd.</p>
+  </header>
+
+  <!-- Size this container to fit your layout -->
+  <div id="chirpy-agent" style="width:100%;max-width:440px;height:600px"></div>
+  <script>
+    window.chirpyAIConfig = {
+      chatbotId: "01b443dd-6b09-498e-9d42-ca1dceaa0229",
+      mode: "inline",
+      target: "#chirpy-agent"
+    };
+  </script>
+  <script src="https://www.chirpy.biz/widget.js" defer></script>
+
+  <footer>Please don't enter student names or other personal information.</footer>
+</body>
+</html>
